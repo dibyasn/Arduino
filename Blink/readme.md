@@ -22,7 +22,7 @@ The Arduino board has GPIO (General-Purpose Input/Output) pins that can be progr
 To protect the LED and ensure safe operation, a current-limiting resistor is required. The resistor value is calculated using Ohm's Law:
 
 **Formula:**
-\[ R = \frac{V_{supply} - V_{LED}}{I} \]
+ R = (V_supply - V_LED) / I
 
 Where:
 - **V_supply** = 5V (Arduino GPIO output voltage)
@@ -41,6 +41,8 @@ Where:
 1. Connect the **positive (longer) leg** of the LED to **pin 13** of the Arduino.
 2. Connect a **220Ω resistor** in series with the **negative (shorter) leg** of the LED.
 3. Connect the other end of the resistor to **GND (ground)** on the Arduino.
+
+Try the simulation of this project online: [Wokwi Simulation](https://wokwi.com/projects/422324100418215937)
 
 ## Arduino Code
 
