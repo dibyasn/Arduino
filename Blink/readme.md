@@ -106,7 +106,7 @@ void loop() {
 ## Explanation of Code
 
 - **setup():** Runs once when the Arduino is powered on. It initializes pin 13 as an output.
-- **loop():** Runs continuously:
+- **loop():** Runs continuously.
   - In **Active HIGH mode**, the LED turns ON when the pin is HIGH and OFF when the pin is LOW.
   - In **Active LOW mode**, the LED turns ON when the pin is LOW and OFF when the pin is HIGH.
 
