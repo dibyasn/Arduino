@@ -1,8 +1,12 @@
 /*
- * Blink LED Program with Resistor Calculation
+ * Blink LED Program (Active LOW Configuration)
  * 
  * This program blinks an LED connected to pin 13 of the Arduino board.
  * The LED will turn ON for 1 second and then turn OFF for 1 second in a loop.
+ * 
+ * This approach is useful when using:
+ * - Common anode LEDs (where multiple LEDs share a common positive voltage).
+ * - Circuits where logic inversion is required (e.g., using open-drain outputs).
  * 
  * Hardware Requirements:
  * - Arduino board (5V logic)
@@ -19,22 +23,22 @@
  * - A 220Ω resistor is a good balance, limiting current to around 13.6mA.
  * 
  * Author: Dibyaranjan
- * Wokwi: https://wokwi.com/projects/422324100418215937
+ * Wokwi Simulation: https://wokwi.com/projects/422745920995800065
  */
 
- #define ledPin 13  // Define the digital pin number where the LED is connected
+ #define ledPin 13  // Define the digital pin number where the LED cathode is connected
 
  // The setup function runs once when the board is powered on or reset
  void setup() {
-   pinMode(ledPin, OUTPUT); // Set the LED pin as an OUTPUT, allowing it to send signals
+   pinMode(ledPin, OUTPUT); // Set the LED pin as an OUTPUT
  }
  
  // The loop function runs continuously after setup
  void loop() {
-   digitalWrite(ledPin, HIGH); // Turn ON the LED by setting the pin HIGH (5V)
-   delay(1000); // Wait for 1 second (1000 milliseconds)
- 
-   digitalWrite(ledPin, LOW); // Turn OFF the LED by setting the pin LOW (0V)
-   delay(1000); // Wait for 1 second before repeating the loop
+   digitalWrite(ledPin, LOW);  // Turn ON the LED (Active LOW Configuration)
+   delay(1000);                // Wait for 1 second
+   
+   digitalWrite(ledPin, HIGH); // Turn OFF the LED
+   delay(1000);                // Wait for 1 second
  }
  
